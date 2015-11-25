@@ -1,0 +1,23 @@
+{
+  "name": "repo-tracker",
+  "homepage": "https://github.com/grantopher/repo-tracker",
+  "authors": [
+    "grantopher <shadowcarson@gmail.com>"
+  ],
+  "description": "A small application that shows a live feed of git activity",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "git",
+    "stuff"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

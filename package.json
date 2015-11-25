@@ -1,0 +1,23 @@
+{
+  "name": "repo-tracker",
+  "version": "1.0.0",
+  "description": "A small application that shows a live feed of git activity",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/grantopher/repo-tracker.git"
+  },
+  "keywords": [
+    "git",
+    "stuff"
+  ],
+  "author": "Grantopher",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/grantopher/repo-tracker/issues"
+  },
+  "homepage": "https://github.com/grantopher/repo-tracker"
+}
