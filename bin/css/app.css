@@ -1,0 +1,10 @@
+.lines-added {
+    color: green;
+}
+.lines-removed {
+    color: red;
+}
+.lines-added, .lines-removed {
+    font-weight: bold;
+    font-size: 1.3em;
+}

@@ -13,8 +13,8 @@
         vm.lines_removed = 0;
         vm.num_of_commits = 0;
         vm.git = {
-            user: 'angular',
-            repo_name: 'angular'
+            user: 'grantopher',
+            repo_name: 'prophetic-creations'
         };
         vm.updateGitData = updateGitData;
 
@@ -26,6 +26,7 @@
         updateGitData();
 
         function updateGitData() {
+            console.log('//===========\n// Gitting...\n//===========');
             var api_string = 'https://api.github.com/repos/' +
                         vm.git.user +'/' + vm.git.repo_name;
             return $http
@@ -35,7 +36,7 @@
                     vm.lines_removed = 0;
                     response.data.forEach(function (commit) {
                         vm.lines_added += commit[ADDED];
-                        vm.lines_removed += commit[REMOVED];
+                        vm.lines_removed += Math.abs(commit[REMOVED]);
                     });
                 })
                 .then(function () {
@@ -48,8 +49,10 @@
                         .then(function (response) {
                             vm.latest_commit_message = response.data[LATEST].commit.message;
                         });
+                    setTimeout(updateGitData, 30000);
                 });
         }
+
     }
 
 })();
