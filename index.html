@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GIT REPO TRACKER</title>
+</head>
+<body ng-app="gitTrackerApp">
+    <h2>Sweet Repo Tracker</h2>
+
+    <div ng-controller="AppCtrl as vm">
+        <button ng-click="vm.updateGitData()">Update Git Data</button>
+        <p>
+            {{ vm.lines_added }} ++ / {{ vm.lines_removed }} --
+        </p>
+        <h5>Latest Commit:</h5>
+        <p>
+            {{ vm.latest_commit_message}}
+        </p>
+        <h5>Set User / Repo</h5>
+        <input type="text" ng-model="vm.git.user" placeholder="git username">
+        <input type="text" ng-model="vm.git.repo_name" placeholder="git repo name">
+
+    </div>
+
+
+    <!-- Vendor Scripts -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="bin/scripts/controller.js"></script>
+
+</body>
+</html>
